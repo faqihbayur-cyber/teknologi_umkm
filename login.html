@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Teknologi UMKM</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+
+  <div class="login-card" id="loginCard">
+    <h1>Demo Login</h1>
+    <p class="subtitle">
+      Silakan isi bebas untuk mencoba dashboard
+    </p>
+
+    <form onsubmit="login(event)" autocomplete="off">
+      
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Masukkan apa saja" required autocomplete="off">
+      </div>
+
+      <div class="input-group password-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Isi bebas" required autocomplete="new-password">
+
+        <span class="toggle-pass" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <button type="submit" class="login-btn" id="loginBtn">
+        <span id="btnText">Masuk</span>
+        <div class="spinner" id="spinner"></div>
+      </button>
+
+    </form>
+
+    <div class="demo-note">
+      🔒 Ini hanya simulasi, bukan login asli
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+// AUTO LOGIN
+if (localStorage.getItem("login") === "true") {
+  window.location.href = "testaplikasi.html";
+}
+
+function togglePassword() {
+  const pass = document.getElementById("password");
+  pass.type = pass.type === "password" ? "text" : "password";
+}
+
+function login(e) {
+  e.preventDefault();
+
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  const spinner = document.getElementById("spinner");
+  const text = document.getElementById("btnText");
+  const card = document.getElementById("loginCard");
+
+  // VALIDASI SIMPLE (WAJIB DIISI)
+  if (!user || !pass) return;
+
+  // LOADING
+  spinner.style.display = "block";
+  text.style.opacity = "0";
+
+  setTimeout(() => {
+
+    localStorage.setItem("login", "true");
+
+    card.classList.add("success");
+
+    setTimeout(() => {
+      window.location.href = "testaplikasi.html";
+    }, 800);
+
+  }, 1000);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* ================= ROOT TAMBAHAN ================= */
+:root {
+  /* SCROLL BUTTON */
+  --scroll-grad-1: var(--primary);
+  --scroll-grad-2: var(--primary-dark);
+
+  /* RING */
+  --scroll-ring-bg: rgba(0,0,0,0.1);
+
+  /* SHADOW */
+  --scroll-shadow: rgba(0,0,0,0.2);
+  --scroll-shadow-hover: color-mix(in srgb, var(--primary) 40%, transparent);
+
+  /* ICON */
+  --scroll-icon: #ffffff;
+}
+
+/* ================= CONTAINER ================= */
+.scroll-progress {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+
+  z-index: 998;
+}
+
+/* ================= SHOW ================= */
+.scroll-progress.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ================= SVG RING ================= */
+.progress-ring {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+/* BACKGROUND RING */
+.progress-ring .bg {
+  fill: none;
+  stroke: var(--scroll-ring-bg);
+  stroke-width: 4;
+}
+
+/* PROGRESS */
+.progress-ring .progress {
+  fill: none;
+  stroke: url(#gradientStroke);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+/* ================= ARROW BUTTON ================= */
+.arrow {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--scroll-grad-1), var(--scroll-grad-2));
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 25px var(--scroll-shadow);
+  transition: 0.3s;
+}
+
+/* ICON */
+.arrow svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--scroll-icon);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ================= HOVER ================= */
+.scroll-progress:hover .arrow {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px var(--scroll-shadow-hover);
+}

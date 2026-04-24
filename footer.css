@@ -1,0 +1,147 @@
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--footer-grad-1) 0%,
+    var(--footer-grad-2) 40%,
+    var(--footer-grad-3) 100%
+  );
+  color: var(--footer-text);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW EFFECT */
+footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(circle, var(--footer-glow), transparent 70%);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+/* CONTAINER */
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* BRAND */
+.footer-brand img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: var(--footer-text);
+}
+
+/* SECTION */
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--footer-text);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* LINK */
+.footer-section a {
+  text-decoration: none;
+  color: var(--footer-text);
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  opacity: 0.75;
+}
+
+/* ICON KONTAK */
+.footer-section li i {
+  margin-right: 8px;
+  width: 18px;
+}
+
+/* BRAND ICON COLORS */
+.wa { color: var(--wa); }
+.phone { color: var(--phone); }
+.email { color: var(--email); }
+
+/* ================= SOCIAL ================= */
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* INSTAGRAM (gradient tetap manual karena kompleks) */
+.socials .ig {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+  color: white;
+}
+
+/* FACEBOOK */
+.socials .fb {
+  background: var(--fb);
+  color: white;
+}
+
+/* TIKTOK */
+.socials .tt {
+  background: var(--tt);
+  color: white;
+}
+
+/* HOVER */
+.socials a:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 25px var(--footer-shadow);
+}
+
+/* ================= COPYRIGHT ================= */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid var(--footer-border);
+  font-size: 13px;
+  color: var(--footer-text);
+}

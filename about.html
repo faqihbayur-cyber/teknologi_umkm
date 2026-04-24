@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teknologi UMKM-Tentang Kami</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="pallet.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="navbar.css">
+  <!-- FAVICON (browser tab) -->
+  <link rel="icon" href="icon-192.png" type="image/png">
+  
+  <!-- ANDROID / PWA -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+  
+  <!-- IOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#2563eb">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+<body>
+  <div class="header">
+    <h1>Tentang Kami</h1>
+    <p>Jasa pembuatan Website dan Aplikasi modern</p>
+  </div>
+  <!-- HERO CONTENT -->
+<div class="content">
+  <div class="big-title">About Us</div>
+  <div class="section-title">
+    experience and flying hours
+  </div>
+
+  <div class="description">
+    <strong>Teknologi UMKM</strong> hadir untuk membantu pelaku usaha kecil dan menengah, khususnya di daerah, agar bisa mulai go digital dengan cara yang mudah dan tidak ribet. Kami paham bahwa tidak semua pelaku usaha familiar dengan teknologi, karena itu kami menyediakan solusi yang sederhana, praktis, dan langsung bisa digunakan.
+  
+    <br><br>
+  
+    Mulai dari pembuatan website, sistem sederhana, hingga notifikasi otomatis, semua kami rancang agar membantu bisnis berjalan lebih efisien tanpa harus pusing teknis. Fokus kami bukan hanya membuat tampilan yang bagus, tapi juga memastikan bisnis Anda bisa lebih dikenal, lebih dipercaya, dan lebih mudah berkembang di era digital.
+  </div>
+</div>
+
+<div class="highlight-wrapper">
+  <div class="highlight-card">
+
+    <!-- 🔥 LOTTIE -->
+    <div id="lottie-highlight"></div>
+
+    <p>
+      Masih ragu ingin membuat website atau aplikasi? 
+      Tenang, Anda bisa langsung mencoba contoh yang sudah kami sediakan. 
+      Rasakan sendiri bagaimana sistem bekerja dengan mudah dan sederhana, tanpa perlu paham teknis.
+    </p>
+
+    <a href="testing.html" class="highlight-btn">
+      Coba Sekarang
+    </a>
+  </div>
+</div>
+
+<section class="why-us">
+  <h1 class="why-title">
+    Mengapa pilih kami? <br>
+    <span>Teknologi UMKM</span>
+  </h1>
+
+  <p class="why-sub">
+    Jasa pembuatan Website dan Aplikasi modern yang mudah digunakan, bahkan untuk Anda yang belum terbiasa dengan teknologi.
+  </p>
+
+  <div class="why-grid">
+
+    <!-- CARD 1 -->
+    <div class="why-card">
+      <div class="why-icon">
+        <!-- SVG -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2>Mudah Digunakan</h2>
+      <p>
+        Sistem dirancang sederhana dan mudah dipahami, cocok untuk UMKM yang baru mulai go digital tanpa ribet.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"
+            stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2>Tampilan Profesional</h2>
+      <p>
+        Website dan aplikasi dibuat modern dan terpercaya agar bisnis Anda terlihat lebih meyakinkan di mata pelanggan.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2>Support & Bantuan</h2>
+      <p>
+        Kami siap membantu Anda dari awal hingga bisa menggunakan sistem secara mandiri, tanpa bingung.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div id="scrollTop"></div>
+<script src="scroll.js"></script>
+<nav></nav>
+<script src="navbar.js"></script>
+<footer></footer>
+<script src="footer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // 🔥 SECTION LOTTIE
+  lottie.loadAnimation({
+    container: document.getElementById("lottie-highlight"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "home.json"
+  });
+
+});
+</script>
+</body>
+</html>

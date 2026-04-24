@@ -1,0 +1,275 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+}
+
+/* HEADING GLOBAL */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.3px;
+}
+/* WRAPPER */
+.lottie-about {
+  width: 100%;
+  margin-top: -20px;
+  margin-bottom: 0; /* 🔥 default mobile */
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .lottie-about {
+    margin-bottom: 600px; /* 🔥 khusus desktop */
+  }
+}
+
+/* LOTTIE */
+#lottie-comp {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.content {
+  padding: 80px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.big-title {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -1px;
+  color: var(--primary-darker);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--teks);
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  position: relative;
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.hero-image:hover::after {
+  opacity: 1;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  margin-top: 40px;
+  text-align: center;
+  animation: slide 1.5s infinite;
+}
+
+.scroll-indicator span {
+  font-size: 24px;
+  color: #059669;
+  writing-mode: vertical-rl;
+}
+
+@keyframes slide {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(12px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.5; }
+}
+
+/* CONTENT 2 */
+.content-2 {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.content-2 h1 {
+  font-size: 36px;
+  color: var(--primary-darker);
+  margin-bottom: 15px;
+}
+
+.content-2 p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* WRAPPER */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+
+  /* 🔥 INI KUNCI NYA */
+  padding: 40px clamp(60px, 6vw, 80px);
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARD */
+.custom-card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  border: 1px solid var(--border-soft);
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--border-soft);
+}
+
+/* HEADER */
+.card-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* BODY */
+.card-body {
+  padding: 15px;
+  flex: 1;
+}
+
+/* DESKRIPSI */
+.card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* IMAGE (LEBIH TINGGI / POTRET FIX) */
+.card-image {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* 🔥 INI YANG DIUBAH */
+.card-image img {
+  width: 100%;
+  height: 400px; /* sebelumnya 220px */
+  object-fit: cover;
+  transition: 0.4s;
+  transform: scale(1.06);
+}
+
+/* FOOTER BUTTON */
+.card-btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+}
+
+.lottie-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#lottie-computer {
+  width: 300px;
+  max-width: 100%;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+.btn-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 25px;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 6px 18px var(--shadow-soft);
+}
+
+/* HOVER */
+.btn-more:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+  box-shadow: 0 10px 25px var(--shadow-medium);
+}
+
+/* CLICK EFFECT */
+.btn-more:active {
+  transform: scale(0.95);
+}

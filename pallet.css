@@ -1,0 +1,82 @@
+/* ======= ROOT (DESIGN SYSTEM) ====== */
+:root {
+  /* PRIMARY (BIRU BRAND) */
+  --primary: #3b82f6;        /* biru utama */
+  --primary-dark: #2563eb;   /* hover / lebih kuat */
+  --primary-darker: #1e40af; /* deep / title */
+  --primary-soft: #dbeafe;   /* background lembut */
+
+  /* TEKS KHUSUS */
+  --teks: #1e3a8a;
+  --teks1: #475569;
+
+  /* TEXT */
+  --text-main: #1f2937;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  /* BACKGROUND */
+  --bg-main: #f8fafc;
+  --bg-soft: #eff6ff;
+  --card-bg: #ffffff;
+
+  /* BORDER & SHADOW */
+  --border-soft: rgba(37, 99, 235, 0.15);
+  --shadow-soft: rgba(0,0,0,0.05);
+  --shadow-medium: rgba(0,0,0,0.1);
+
+  /* ACCENT */
+  --accent-yellow: #facc15;
+}
+
+/* ================= ROOT FOOTER ================= */
+:root {
+  /* FOOTER GRADIENT */
+  --footer-grad-1: var(--primary);
+  --footer-grad-2: color-mix(in srgb, var(--primary) 70%, white);
+  --footer-grad-3: var(--bg-soft);
+
+  /* FOOTER TEXT */
+  --footer-text: var(--teks);
+  --footer-text-soft: var(--text-secondary);
+
+  /* BORDER */
+  --footer-border: rgba(30, 58, 138, 0.2);
+
+  /* GLOW */
+  --footer-glow: rgba(255,255,255,0.3);
+
+  /* SHADOW */
+  --footer-shadow: rgba(0,0,0,0.2);
+
+  /* ICON BRAND */
+  --wa: #25D366;
+  --phone: #60a5fa;
+  --email: #f87171;
+
+  /* SOCIAL BRAND */
+  --fb: #1877F2;
+  --tt: #000;
+}
+
+/* ================= ROOT NAVBAR ================= */
+:root {
+  /* NAV */
+  --nav-grad-1: var(--primary);
+  --nav-grad-2: var(--primary-dark);
+
+  --nav-text: var(--teks);
+  --nav-text-hover: #ffffff;
+
+  /* GLASS */
+  --nav-glass: rgba(255,255,255,0.2);
+  --nav-glass-strong: rgba(255,255,255,0.75);
+  --nav-border-glass: rgba(255,255,255,0.3);
+
+  /* SHADOW */
+  --nav-shadow: rgba(0,0,0,0.2);
+  --nav-shadow-soft: rgba(0,0,0,0.1);
+
+  /* ACTIVE SHADOW */
+  --nav-active-shadow: rgba(37, 99, 235, 0.35);
+}

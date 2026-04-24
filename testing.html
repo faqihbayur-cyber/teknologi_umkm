@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teknologi UMKM-Testing</title>
+  <link rel="stylesheet" href="testing.css">
+  <link rel="stylesheet" href="pallet.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="navbar.css">
+  <!-- FAVICON (browser tab) -->
+  <link rel="icon" href="icon-192.png" type="image/png">
+  
+  <!-- ANDROID / PWA -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+  
+  <!-- IOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#2563eb">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Coba Sistem Kami</h1>
+  <p>Rasakan langsung bagaimana bisnis Anda bisa lebih rapi & otomatis</p>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+  <div class="big-title">Pilih Demo</div>
+
+  <div class="section-title">
+    Coba langsung tanpa ribet
+  </div>
+
+  <div class="description">
+    Kami memahami bahwa tidak semua pelaku usaha familiar dengan teknologi. 
+    Karena itu, kami menyediakan contoh sistem yang bisa langsung Anda coba. 
+    <br><br>
+    Pilih salah satu demo di bawah ini dan rasakan sendiri bagaimana sistem bekerja 
+    untuk membantu bisnis Anda menjadi lebih mudah dan teratur.
+  </div>
+</div>
+
+<!-- DEMO LIST -->
+<div class="demo-wrapper">
+
+  <div class="demo-card">
+    <h2>Demo Website Usaha</h2>
+    <p>
+      Lihat bagaimana website dapat membantu bisnis Anda tampil lebih profesional 
+      dan mudah ditemukan oleh pelanggan.
+    </p>
+    <button class="demo-btn" onclick="openDemo('website')">Coba Demo</button>
+  </div>
+
+  <div class="demo-card">
+    <h2>Demo Aplikasi / Website</h2>
+    <p>
+      Rasakan bagaimana aplikasi dapat membantu mencatat data, pesanan, 
+      dan aktivitas bisnis Anda secara otomatis.
+    </p>
+    <button class="demo-btn" onclick="openDemo('app')">Coba Demo</button>
+  </div>
+
+</div>
+<div class="demo-modal" id="demoModal">
+  <div class="demo-modal-box">
+
+    <button class="close-btn" onclick="closeDemo()">✕</button>
+
+    <h2 id="demoTitle">Judul</h2>
+
+    <!-- 🔥 FRAME CONTAINER -->
+    <div class="demo-frames" id="demoFrames"></div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="content-2">
+  <h1>Siap Pakai untuk Usaha Anda</h1>
+  <p>
+    Semua sistem bisa disesuaikan dengan kebutuhan bisnis Anda. 
+    Tidak perlu paham teknis, kami bantu dari awal sampai bisa digunakan.
+  </p>
+
+  <a href="https://wa.me/62895604273200?text=Saya%20ingin%20konsultasi%20tentang%20sistem%20digital%20untuk%20usaha" 
+     class="cta-btn" target="_blank">
+     Konsultasi Sekarang
+  </a>
+</div>
+
+<div id="scrollTop"></div>
+<script src="scroll.js"></script>
+<nav></nav>
+<script src="navbar.js"></script>
+<footer></footer>
+<script src="footer.js"></script>
+<script>
+function openDemo(type){
+  const modal = document.getElementById("demoModal");
+  const title = document.getElementById("demoTitle");
+  const frames = document.getElementById("demoFrames");
+
+  let data = [];
+
+  // =========================
+  // DATA TIAP DEMO
+  // =========================
+  if(type === "website"){
+    title.innerText = "Demo Website Usaha";
+
+    data = [
+      { img:"usaha1.jpg", title:"Klinik", link:"https://faqihbayur-cyber.github.io/terapi/"},
+      { img:"usaha2.jpg", title:"Toko Sembako", link:"https://faqihbayur-cyber.github.io/sembako/"},
+    ];
+  }
+
+  if(type === "app"){
+    title.innerText = "Demo Aplikasi Kasir";
+
+    data = [
+      { img:"app1.jpg", title:"Dashboard Kasir", link:"https://faqihbayur-cyber.github.io/kasir/"},
+      { img:"app2.jpg", title:"Aplikasi Sales", link:"https://faqihbayur-cyber.github.io/sales/"},
+    ];
+  }
+
+  // =========================
+  // RENDER FRAME
+  // =========================
+  frames.innerHTML = "";
+
+  data.forEach(d => {
+    frames.innerHTML += `
+      <div class="demo-frame">
+        <img src="${d.img}" alt="">
+        <h4>${d.title}</h4>
+        <a href="${d.link}">Coba</a>
+      </div>
+    `;
+  });
+
+  modal.classList.add("active");
+}
+
+function closeDemo(){
+  document.getElementById("demoModal").classList.remove("active");
+}
+
+// klik luar = close
+document.getElementById("demoModal").addEventListener("click", function(e){
+  if(e.target === this){
+    closeDemo();
+  }
+});
+</script>
+</body>
+</html>

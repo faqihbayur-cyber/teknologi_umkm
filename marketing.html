@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teknologi UMKM - Marketing</title>
+
+  <link rel="stylesheet" href="pallet.css">
+  <link rel="stylesheet" href="marketing.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll.css">
+  <!-- FAVICON (browser tab) -->
+  <link rel="icon" href="icon-192.png" type="image/png">
+  
+  <!-- ANDROID / PWA -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+  
+  <!-- IOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#2563eb">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- LOTTIE IMAGE -->
+<div class="lottie-about">
+    <div id="lottie-comp"></div>
+</div>
+<!-- HERO CONTENT -->
+<div class="content">
+  <div class="big-title">Sosial Media Tidak Jalan?</div>
+
+  <div class="section-title">
+    Tidak sempat posting? Bingung konten?
+  </div>
+
+  <div class="description">
+    Banyak pelaku UMKM punya sosial media, tapi jarang update, kontennya kurang menarik, atau tidak menghasilkan pelanggan.
+    <br><br>
+    Kami bantu dari pembuatan konten, desain, sampai posting rutin — jadi Anda bisa fokus ke bisnis.
+  </div>
+</div>
+
+<!-- MASALAH -->
+<section class="problem-section">
+  <h2>Masalah yang Sering Terjadi</h2>
+
+  <div class="problem-list">
+    <div class="problem-item">Jarang posting</div>
+    <div class="problem-item">Bingung mau upload apa</div>
+    <div class="problem-item">Desain kurang menarik</div>
+    <div class="problem-item">Sepi pelanggan</div>
+    <div class="problem-item">Tidak paham cara berkembang</div>
+  </div>
+</section>
+
+<!-- SOLUSI -->
+<section class="solution-section">
+  <h2>Kami Bantu Anda</h2>
+
+  <div class="solution-list">
+    <div>✔ Desain konten menarik</div>
+    <div>✔ Caption siap pakai</div>
+    <div>✔ Posting terjadwal</div>
+    <div>✔ Optimasi agar lebih banyak yang lihat</div>
+    <div>✔ Bisa bantu iklan (opsional)</div>
+  </div>
+</section>
+
+<!-- PAKET -->
+<section class="pricing-section">
+
+  <h2 class="pricing-title">Paket Digital Marketing</h2>
+
+  <div class="pricing-wrapper">
+
+    <!-- BASIC -->
+    <div class="price-card">
+      <h3>Basic</h3>
+      <p class="price">Rp 350.000 <span>/bulan</span></p>
+
+      <ul>
+        <li>12 posting / bulan</li>
+        <li>Desain sederhana</li>
+        <li>Caption basic</li>
+      </ul>
+
+      <a href="https://wa.me/62895604273200?text=Saya%20tertarik%20paket%20Basic%20Digital%20Marketing" target="_blank" class="price-btn">
+        Pilih Paket
+      </a>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="price-card active">
+      <div class="badge">Paling Laku</div>
+      <h3>Standard</h3>
+      <p class="price">Rp 700.000 <span>/bulan</span></p>
+
+      <ul>
+        <li>20-25 posting / bulan</li>
+        <li>Desain lebih menarik</li>
+        <li>Caption + hashtag</li>
+        <li>Jadwal posting</li>
+      </ul>
+
+      <a href="https://wa.me/62895604273200?text=Saya%20tertarik%20paket%20Standard%20Digital%20Marketing" target="_blank" class="price-btn">
+        Pilih Paket
+      </a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="price-card">
+      <h3>Premium</h3>
+      <p class="price">Rp 1.200.000 <span>/bulan</span></p>
+
+      <ul>
+        <li>30 posting / bulan</li>
+        <li>Desain custom</li>
+        <li>Caption + hashtag</li>
+        <li>Insight bulanan</li>
+        <li>Konsultasi</li>
+      </ul>
+
+      <a href="https://wa.me/62895604273200?text=Saya%20tertarik%20paket%20Premium%20Digital%20Marketing" target="_blank" class="price-btn">
+        Pilih Paket
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Tidak Perlu Pusing Posting Setiap Hari</h2>
+  <p>Kami bantu kelola sosial media Anda, biar Anda fokus jualan saja.</p>
+
+  <a href="https://wa.me/62895604273200?text=Halo%20saya%20ingin%20konsultasi%20digital%20marketing" 
+     target="_blank" 
+     class="cta-btn">
+    Konsultasi Sekarang
+  </a>
+</section>
+
+<div id="scrollTop"></div>
+<script src="scroll.js"></script>
+
+<nav></nav>
+<script src="navbar.js"></script>
+
+<footer></footer>
+<script src="footer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+<script>
+lottie.loadAnimation({
+  container: document.getElementById('lottie-comp'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'marketing.json' // 🔥 file kamu
+});
+function toggleDetail(btn) {
+  const detail = btn.nextElementSibling;
+  detail.style.maxHeight = detail.style.maxHeight
+    ? null
+    : detail.scrollHeight + "px";
+}
+</script>
+</body>
+</html>

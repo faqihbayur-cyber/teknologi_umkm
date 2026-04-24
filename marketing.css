@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+}
+
+/* CONTENT */
+.content {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.big-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary-darker);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* PROBLEM */
+.problem-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.problem-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.problem-item {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-soft);
+}
+
+/* SOLUTION */
+.solution-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.solution-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+/* PRICING */
+.pricing-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.pricing-wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.price-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px var(--shadow-soft);
+  position: relative;
+}
+
+.price-card.active {
+  transform: scale(1.05);
+  border: 2px solid var(--primary);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: var(--primary);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.price-card ul {
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 18px;
+}
+
+/* BUTTON */
+.price-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: var(--primary);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+  .pricing-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

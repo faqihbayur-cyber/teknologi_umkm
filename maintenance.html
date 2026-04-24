@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teknologi UMKM - Maintenance</title>
+
+  <link rel="stylesheet" href="pallet.css">
+  <link rel="stylesheet" href="maintenance.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll.css">
+  <link rel="stylesheet" href="navbar.css">
+  <!-- FAVICON (browser tab) -->
+  <link rel="icon" href="icon-192.png" type="image/png">
+  
+  <!-- ANDROID / PWA -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+  
+  <!-- IOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#2563eb">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>MAINTENANCE</h1>
+  <p>Perbaikan & perawatan website / aplikasi tanpa ribet</p>
+</div>
+
+<!-- INTRO -->
+<div class="content">
+  <div class="big-title">Perawatan Sistem</div>
+
+  <div class="section-title">
+    Website / Aplikasi Error? Lemot? Tidak Jalan?
+  </div>
+
+  <div class="description">
+    Banyak pelaku UMKM mengalami kendala seperti website error, aplikasi tidak bisa dibuka, atau sistem yang tiba-tiba bermasalah.
+    <br><br>
+    Kami bantu memperbaiki dan merawat sistem Anda agar tetap berjalan lancar, tanpa harus pusing teknis.
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <h2>Masalah yang Sering Terjadi</h2>
+
+  <div class="problem-list">
+    <div class="problem-item">Website tiba-tiba error</div>
+    <div class="problem-item">Loading lama / lemot</div>
+    <div class="problem-item">Data tidak tersimpan</div>
+    <div class="problem-item">Tidak paham cara update</div>
+    <div class="problem-item">Takut website down</div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution-section">
+  <h2>Kami Bantu Anda</h2>
+
+  <div class="solution-list">
+    <div>✔ Perbaikan bug & error</div>
+    <div>✔ Optimasi performa</div>
+    <div>✔ Update keamanan</div>
+    <div>✔ Backup data rutin</div>
+    <div>✔ Support jika ada masalah</div>
+  </div>
+</section>
+
+<!-- LOTTIE IMAGE -->
+<div class="lottie-about">
+    <div id="lottie-comp"></div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Fokus ke Bisnis, Biar Kami Urus Sistemnya</h2>
+  <p>
+    Tidak perlu pusing soal teknis. Kami bantu menjaga website & aplikasi Anda tetap berjalan dengan baik.
+  </p>
+
+  <a href="https://wa.me/62895604273200?text=Saya%20ingin%20konsultasi%20layanan%20maintenance%20website%20/%20aplikasi" 
+     target="_blank" 
+     class="cta-btn">
+    Konsultasi Sekarang
+  </a>
+</section>
+
+<!-- SCROLL -->
+<div id="scrollTop"></div>
+<script src="scroll.js"></script>
+
+<nav></nav>
+<script src="navbar.js"></script>
+
+<footer></footer>
+<script src="footer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+<script>
+lottie.loadAnimation({
+  container: document.getElementById('lottie-comp'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'comp.json' // 🔥 file kamu
+});
+function toggleDetail(btn) {
+  const detail = btn.nextElementSibling;
+  detail.style.maxHeight = detail.style.maxHeight
+    ? null
+    : detail.scrollHeight + "px";
+}
+</script>
+
+</body>
+</html>

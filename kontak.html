@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teknologi UMKM - Kontak</title>
+
+  <link rel="stylesheet" href="kontak.css">
+  <link rel="stylesheet" href="pallet.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="navbar.css">
+
+    <!-- ANDROID / PWA -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+  
+  <!-- IOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  
+  <!-- THEME COLOR -->
+  <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Konsultasi Gratis</h1>
+  <p>Mulai digitalisasi usaha Anda tanpa ribet</p>
+</div>
+
+<!-- WRAPPER -->
+<div class="contact-container">
+
+  <!-- LEFT -->
+  <div class="contact-left">
+    <h2>Butuh Website atau Aplikasi?</h2>
+    <p>
+      Kami bantu UMKM, khususnya di daerah, untuk punya sistem digital yang simpel, 
+      rapi, dan siap dipakai. Tidak perlu paham teknis — kami dampingi dari awal.
+    </p>
+
+    <ul class="benefit-list">
+      <li>✔ Bisa konsultasi gratis</li>
+      <li>✔ Sistem disesuaikan dengan usaha Anda</li>
+      <li>✔ Support & maintenance tersedia</li>
+    </ul>
+
+    <a href="https://wa.me/62895604273200?text=Halo%20saya%20ingin%20konsultasi%20website/aplikasi"
+       class="wa-btn" target="_blank">
+       💬 Chat WhatsApp
+    </a>
+
+    <span class="small-text">Respon cepat • Tanpa biaya konsultasi</span>
+  </div>
+
+  <!-- RIGHT (FORM) -->
+  <div class="contact-right">
+    <h3>Kirim Kebutuhan Anda</h3>
+
+    <form onsubmit="sendToWA(event)">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="wa" placeholder="Nomor WhatsApp" required>
+
+      <select id="layanan" required>
+        <option value="">Pilih Kebutuhan</option>
+        <option>Website</option>
+        <option>Aplikasi</option>
+        <option>Sistem Notifikasi</option>
+        <option>Digital Marketing</option>
+        <option>Maintenance</option>
+      </select>
+
+      <textarea id="pesan" placeholder="Ceritakan kebutuhan usaha Anda..."></textarea>
+
+      <button type="submit">Kirim & Konsultasi</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<nav></nav>
+<script src="navbar.js"></script>
+
+<footer></footer>
+<script src="footer.js"></script>
+
+<script>
+function sendToWA(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const wa = document.getElementById("wa").value;
+  const layanan = document.getElementById("layanan").value;
+  const pesan = document.getElementById("pesan").value;
+
+  const text = `Halo, saya ingin konsultasi%0A
+Nama: ${nama}%0A
+No WA: ${wa}%0A
+Kebutuhan: ${layanan}%0A
+Pesan: ${pesan}`;
+
+  window.open(`https://wa.me/62895604273200?text=${text}`, "_blank");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* CONTENT */
+.content {
+  padding: 70px 20px 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.big-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary-darker);
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 22px;
+  color: var(--teks);
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* DEMO */
+.demo-wrapper {
+  padding: 40px clamp(20px, 6vw, 80px);
+  display: grid;
+  gap: 20px;
+}
+
+.demo-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px var(--shadow-soft);
+  text-align: left;
+  border: 1px solid var(--border-soft);
+  transition: 0.3s;
+}
+
+.demo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-medium);
+}
+
+.demo-card h2 {
+  font-size: 20px;
+  color: var(--primary-darker);
+  margin-bottom: 10px;
+}
+
+.demo-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.demo-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+
+  transition: 0.3s;
+}
+
+.demo-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.content-2 {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.content-2 h1 {
+  font-size: 28px;
+  color: var(--primary-darker);
+  margin-bottom: 10px;
+}
+
+.content-2 p {
+  max-width: 500px;
+  margin: auto;
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+
+  box-shadow: 0 6px 18px var(--shadow-soft);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* =========================
+   MODAL DEMO
+========================= */
+
+.demo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.demo-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.demo-modal-box {
+  width: 90%;
+  max-width: 400px;
+
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+
+  text-align: center;
+  position: relative;
+
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.demo-modal-box h2 {
+  margin-bottom: 10px;
+  color: var(--primary-darker);
+}
+
+.demo-modal-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* =========================
+   FRAME SLIDER
+========================= */
+
+.demo-frames {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 5px;
+  scroll-snap-type: x mandatory;
+}
+
+.demo-frames::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   FRAME (RAMPING 2:4)
+========================= */
+
+.demo-frame {
+  min-width: 140px; /* 🔥 ramping */
+  max-width: 140px;
+  flex: 0 0 auto;
+
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 10px;
+
+  text-align: center;
+  scroll-snap-align: center;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+
+/* =========================
+   GAMBAR (RASIO 2:4)
+========================= */
+
+.demo-frame img {
+  width: 100%;
+  aspect-ratio: 2 / 4; /* 🔥 portrait */
+  object-fit: cover;
+
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.demo-frame h4 {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #333;
+  line-height: 1.3;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.demo-frame a {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 12px;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+
+  transition: 0.2s;
+}
+
+.demo-frame a:active {
+  transform: scale(0.95);
+}
