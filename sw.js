@@ -1,4 +1,4 @@
-const CACHE_NAME = "web-cache-v1";
+const CACHE_NAME = "web-cache-v2";
 
 const STATIC_ASSETS = [
   "/",
