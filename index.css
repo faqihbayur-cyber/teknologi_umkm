@@ -522,3 +522,97 @@ h1, h2, h3 {
 .highlight-btn:active {
   transform: scale(0.95);
 }
+
+:root{
+  --primary:#2563eb;
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --shadow:0 14px 35px rgba(0,0,0,.12);
+}
+
+/* CARD */
+.cta-card{
+  background:var(--card);
+  padding:24px 20px;
+  margin:20px;
+  border-radius:20px;
+
+  text-align:center;
+  box-shadow:var(--shadow);
+
+  animation:fadeUp .6s ease;
+}
+
+/* TITLE */
+.cta-card h2{
+  font-size:20px;
+  color:var(--text);
+  margin-bottom:10px;
+}
+
+/* DESC */
+.cta-card p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+/* BUTTON */
+.cta-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:12px 18px;
+  border-radius:50px;
+
+  background:var(--primary);
+  color:white;
+  text-decoration:none;
+
+  font-size:14px;
+  font-weight:600;
+
+  box-shadow:0 10px 25px rgba(37,99,235,.3);
+
+  transition:.25s;
+}
+
+/* ICON */
+.cta-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+
+  background:rgba(255,255,255,.2);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cta-icon svg{
+  width:16px;
+  height:16px;
+  fill:white;
+}
+
+/* HOVER */
+.cta-btn:hover{
+  transform:translateY(-2px) scale(1.03);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

@@ -43,6 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>Konten sosial media marketing</li>
           </ul>
         </div>
+        
+        <!-- KANTOR -->
+        <div class="footer-section">
+          <h3>Kantor Kami</h3>
+          <ul>
+            <li>Karawang - Cilamaya Kulon</li>
+            <li>Cirebon - Palimanan</li>
+            <li>Indramayu - Jatibarang</li>
+          </ul>
+        </div>
 
         <!-- SOSMED -->
         <div class="footer-section">
