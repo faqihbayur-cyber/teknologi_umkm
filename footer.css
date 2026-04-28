@@ -1,4 +1,3 @@
-
 /* ================= FOOTER ================= */
 footer {
   margin-top: 60px;
@@ -28,7 +27,7 @@ footer::before {
   pointer-events: none;
 }
 
-/* CONTAINER */
+/* ================= CONTAINER ================= */
 .footer-container {
   max-width: 1100px;
   margin: auto;
@@ -37,25 +36,51 @@ footer::before {
   z-index: 2;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+
+  align-items: start; /* 🔥 fix semua mulai dari atas */
 }
 
-/* BRAND */
+/* ================= BRAND ================= */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 🔥 rata kiri */
+  text-align: left;
+}
+
+/* LOGO */
 .footer-brand img {
-  width: 60px;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+
   margin-bottom: 10px;
+
+  display: block;
+  transition: 0.3s;
+
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
 }
 
+/* HOVER LOGO */
+.footer-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
 .footer-brand p {
   font-size: 14px;
   color: var(--footer-text);
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .footer-section h3 {
   margin-bottom: 10px;
   font-size: 16px;
@@ -72,7 +97,7 @@ footer::before {
   margin-bottom: 8px;
 }
 
-/* LINK */
+/* ================= LINK ================= */
 .footer-section a {
   text-decoration: none;
   color: var(--footer-text);
@@ -83,13 +108,13 @@ footer::before {
   opacity: 0.75;
 }
 
-/* ICON KONTAK */
+/* ================= ICON KONTAK ================= */
 .footer-section li i {
   margin-right: 8px;
   width: 18px;
 }
 
-/* BRAND ICON COLORS */
+/* ================= BRAND COLORS ================= */
 .wa { color: var(--wa); }
 .phone { color: var(--phone); }
 .email { color: var(--email); }
@@ -112,7 +137,7 @@ footer::before {
   transition: 0.3s;
 }
 
-/* INSTAGRAM (gradient tetap manual karena kompleks) */
+/* INSTAGRAM */
 .socials .ig {
   background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
   color: white;

@@ -30,12 +30,15 @@
   </div>
   <!-- HERO CONTENT -->
 <div class="content">
-  <div class="big-title">TEKNOLOGI UMKM</div>
+
+  <div class="big-title">
+    <img src="logo.png" alt="Logo Teknologi UMKM">
+  </div>
 
   <div class="section-title">
     Saatnya UMKM Go Digital
   </div>
-  
+    
   <div class="description">
     Tidak perlu bingung soal teknologi. Kami bantu Anda memiliki website atau aplikasi sendiri dengan cara yang mudah dan terjangkau. 
     Cocok untuk UMKM di daerah yang ingin berkembang tanpa ribet.
@@ -45,6 +48,7 @@
   <div class="scroll-indicator">
     <span>&gt;&gt;</span>
   </div>
+
 </div>
 
 <div class="cta-card">
@@ -306,7 +310,7 @@ lottie.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'computer.json' // 🔥 file kamu
+  path: 'home.json' // 🔥 file kamu
 });
 
 function toggleDetail(btn) {
@@ -316,10 +320,6 @@ function toggleDetail(btn) {
   } else {
     detail.style.maxHeight = detail.scrollHeight + "px";
   }
-}
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
 }
 
 </script>

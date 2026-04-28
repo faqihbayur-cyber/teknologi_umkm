@@ -39,41 +39,61 @@ h1, h2, h3 {
   opacity: 0.9;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .content {
   padding: 80px 20px 60px;
   max-width: 900px;
   margin: 0 auto;
   color: #333;
+
+  text-align: left; /* 🔥 rata kiri */
 }
 
+/* ================= LOGO ================= */
 .big-title {
-  font-size: 50px;
-  font-weight: 900;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: -1px;
-  color: var(--primary-darker);
   margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 25px;
-  font-weight: 600;
-  color: var(--teks);
-  margin-bottom: 15px;
+/* LOGO IMAGE */
+.big-title img {
+  width: 100%;
+  max-width: 380px; /* sedikit lebih kecil biar elegan */
+  height: auto;
+
+  display: block;
+  margin: 0; /* 🔥 hilangkan center */
+
+  transition: 0.3s;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
 }
 
+/* HOVER */
+.big-title img:hover {
+  transform: scale(1.04);
+}
+
+/* ================= TITLE ================= */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--teks);
+  margin-bottom: 12px;
+}
+
+/* ================= DESCRIPTION ================= */
 .description {
   font-size: 16px;
-  color: #666;
+  color: #64748b;
   line-height: 1.8;
-  text-align: justify;
+
+  text-align: left; /* 🔥 rata kiri */
+  max-width: 600px; /* 🔥 biar ga kepanjangan */
 }
 
-/* SCROLL INDICATOR */
+/* ================= SCROLL ================= */
 .scroll-indicator {
   margin-top: 40px;
-  text-align: center;
+  text-align: center; /* 🔥 ikut kiri */
   animation: slide 1.5s infinite;
 }
 
@@ -83,6 +103,7 @@ h1, h2, h3 {
   writing-mode: vertical-rl;
 }
 
+/* ANIMATION */
 @keyframes slide {
   0% { transform: translateY(0); opacity: 0.5; }
   50% { transform: translateY(12px); opacity: 1; }

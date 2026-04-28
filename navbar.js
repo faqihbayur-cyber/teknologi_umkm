@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="nav-submenu" id="layananMenu">
           <a href="website.html">Pembuatan Website</a>
           <a href="aplikasi.html">Pembuatan Aplikasi</a>
-          <a href="maintenance.html">Maintenance</a>
-          <a href="marketing.html">Digital Marketing</a>
+          <a href="marketing.html">Sosial Media Marketing</a>
+          <a href="maintenance.html">Perbaikan (Web & App)</a>
         </div>
       </div>
 
